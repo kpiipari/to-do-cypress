@@ -1,0 +1,24 @@
+{
+  "name": "to-do-cypress",
+  "version": "1.0.0",
+  "description": "A simple repository to test a To Do - app with Cypress",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kpiipari/to-do-cypress.git"
+  },
+  "author": "Kaisa Piipari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kpiipari/to-do-cypress/issues"
+  },
+  "homepage": "https://github.com/kpiipari/to-do-cypress#readme",
+  "devDependencies": {
+    "@testing-library/cypress": "^8.0.3",
+    "cypress": "^10.10.0"
+  }
+}
