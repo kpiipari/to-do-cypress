@@ -2,11 +2,11 @@
 A simple repository to test a To Do - app with Cypress
 
 
-##Installation
+## Installation
 `npm install`
 
-##Opening Cypress App
+## Opening Cypress App
 `npm run cypress:open`
 
-##Run tests headless
+## Run tests headless
 `npm run cypress:run`
