@@ -62,20 +62,22 @@ describe('to-do app', () => {
       cy.findByText('bread').should('not.exist')
     })
   })
-  
+
   context('todo items marked as checked', () => {
     beforeEach(() => {
-    //calls addToDoItems to add a grocery list as todo items
-    addTodoItems(groceryList)
-    //calls checkToDoItem to check each grocery to do item
-    checkToDoItem(groceryList)
-    //checks that there are five todo items
-    cy.get('.todo-list li')
-    .should('have.length', 5)
+      //adds grocery list as todo items
+      addTodoItems(groceryList)
+
+      //checks each grocery to do item
+      checkToDoItem(groceryList)
+
+      //confirms that there are five todo items
+      cy.get('.todo-list li')
+      .should('have.length', 5)
     })
 
     it('can delete a completed todo item', () => {
-      //deletes the last checked list item
+      //deletes the last checked todo list item
       cy.findAllByRole('button').last().click()
       cy.get('.todo-list li')
       .should('have.length', 4)
@@ -83,7 +85,7 @@ describe('to-do app', () => {
     })
 
     it('can uncheck a completed todo item', () => {
-      //unchecks the last checked list item
+      //unchecks the last checked todo list item
       cy.findByText('bread')
       .parents('li')
       .find('input[type=checkbox]')
